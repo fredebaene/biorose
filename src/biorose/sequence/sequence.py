@@ -27,3 +27,13 @@ class Sequence(ABC):
         """
         for monomer in self._seq:
             self._monomer_counts[monomer] += 1
+
+    def transcribe_coding_strand(self) -> RNA:
+        """
+        This method transcribes the DNA sequence as it were a coding strand 
+        and returns an instance of `RNA`.
+
+        Returns:
+            RNA: an instance of `RNA`.
+        """
+        return RNA(seq="".join(["U" if i == "T" else i for i in self._seq]))
