@@ -5,7 +5,6 @@ sequence-specific must implement.
 
 
 from abc import ABC
-from typing import Protocol, runtime_checkable
 
 
 class Sequence(ABC):
