@@ -28,7 +28,10 @@ def test_monomer_counting(seq_file, exp_res):
 
 @pytest.mark.parametrize(
     "dna_seq_file, exp_res_file",
-    [("dna_sequence_003.txt", "rna_sequence_001.txt")]
+    [
+        ("dna_sequence_003.txt", "rna_sequence_001.txt"),
+        ("dna_sequence_004.txt", "rna_sequence_002.txt"),
+    ]
 )
 def test_coding_strand_transcription(dna_seq_file, exp_res_file):
     """
