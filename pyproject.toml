@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "bioRose"
 dynamic = ["version"]
-requires-python = ">= 3.10"
+requires-python = ">= 3.9"
 dependencies = [
     "numpy==1.26.3",
     "pandas==2.0.3",
