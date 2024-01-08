@@ -48,3 +48,23 @@ def test_coding_strand_transcription(dna_seq_file, exp_res_file):
     rna = dna.transcribe_coding_strand()
     assert isinstance(rna, RNA)
     assert rna.seq == exp_res
+
+@pytest.mark.parametrize(
+    "dna_seq_file, exp_seq_file",
+    [
+        ("dna_sequence_005.txt", "rna_sequence_003.txt"),
+    ]
+)
+def test_rev_comp(dna_seq_file, exp_seq_file):
+    """
+    This test checks if the `.get_rev_comp()` method correctly determines the 
+    reverse complement of the coding strand.
+    """
+    dna_seq_file_path = _DATA_DIR / dna_seq_file
+    exp_res_file_path = _DATA_DIR / exp_seq_file
+    with open(dna_seq_file_path, "r") as f:
+        dna = DNA(f.read().strip())
+    with open(exp_res_file_path, "r") as f:
+        exp_res = f.read().strip()
+    dna.get_rev_comp()
+    assert dna.rev_comp == exp_res
