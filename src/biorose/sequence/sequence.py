@@ -10,7 +10,7 @@ from abc import ABC
 class Sequence(ABC):
     def __init__(self, seq: str, id: str = None) -> None:
         self._id = id
-        self_seq = seq
+        self._seq = seq
     
     def count_monomers(self) -> None:
         """
