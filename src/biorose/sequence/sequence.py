@@ -17,6 +17,10 @@ class Sequence(ABC):
         self._monomer_counts = {monomer: 0 for monomer in self._MONOMERS}
 
     @property
+    def id(self):
+        return self._id
+
+    @property
     def monomer_counts(self):
         return " ".join([str(i) for i in self._monomer_counts.values()])
     
