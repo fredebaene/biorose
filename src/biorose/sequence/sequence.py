@@ -1,6 +1,7 @@
 """
-This module implements an interface that defines the methods each 
-sequence-specific must implement.
+This module defines a base class for biological sequences. Biological 
+sequences comprise nucleic acids (DNA and RNA) and proteins (amino acid 
+sequences).
 """
 
 
@@ -8,6 +9,7 @@ from abc import ABC
 
 
 class Sequence(ABC):
+    """A base class for biological sequences"""
     def __init__(self, seq: str, id: str = None) -> None:
         self._id = id
         self._seq = seq
