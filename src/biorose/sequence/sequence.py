@@ -26,11 +26,3 @@ class Sequence(ABC):
         """
         for monomer in self._seq:
             self._monomer_counts[monomer] += 1
-
-    def _initialize_monomer_counts(self) -> None:
-        """
-        This method initializes a dictionary to hold the monomer frequencies 
-        in the sequence. This dictionary starts out with all count values of 
-        zero for every monomer.
-        """
-        
