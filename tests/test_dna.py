@@ -53,6 +53,7 @@ def test_coding_strand_transcription(dna_seq_file, exp_res_file):
     "dna_seq_file, exp_seq_file",
     [
         ("dna_sequence_005.txt", "rna_sequence_003.txt"),
+        ("dna_sequence_006.txt", "rna_sequence_004.txt"),
     ]
 )
 def test_rev_comp(dna_seq_file, exp_seq_file):
