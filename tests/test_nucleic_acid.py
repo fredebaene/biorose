@@ -1,4 +1,4 @@
-from biorose.nucleic.nucleic import NucleicAcid
+from biorose.nucleic.dna import DNA
 import pytest
 
 
@@ -41,6 +41,6 @@ def test_monomer_counting(seq, exp_res):
     This test checks if the `.count_monomers()` method correctly calculates 
     the frequencies of each of the possible monomers in the sequence.
     """
-    na = NucleicAcid(seq)
+    na = DNA(seq)
     na.count_monomers()
     assert na.monomer_counts == exp_res
