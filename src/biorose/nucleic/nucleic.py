@@ -8,7 +8,7 @@ from biorose.sequence.sequence import Sequence
 
 
 class NucleicAcid(Sequence):
-    _MONOMERS = {"A", "C", "G", "T"}
+    _MONOMERS = "ACGT"
 
     def __init__(self, seq: str, id: str = None) -> None:
         super().__init__(seq=seq, id=id)
