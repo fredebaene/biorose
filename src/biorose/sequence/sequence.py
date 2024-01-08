@@ -20,6 +20,10 @@ class Sequence(ABC):
     def monomer_counts(self):
         return " ".join([str(i) for i in self._monomer_counts.values()])
     
+    @property
+    def seq(self):
+        return self._seq
+    
     def count_monomers(self) -> None:
         """
         This method calculates the frequency of each of the monomers that can 
@@ -27,13 +31,3 @@ class Sequence(ABC):
         """
         for monomer in self._seq:
             self._monomer_counts[monomer] += 1
-
-    def transcribe_coding_strand(self) -> RNA:
-        """
-        This method transcribes the DNA sequence as it were a coding strand 
-        and returns an instance of `RNA`.
-
-        Returns:
-            RNA: an instance of `RNA`.
-        """
-        return RNA(seq="".join(["U" if i == "T" else i for i in self._seq]))
