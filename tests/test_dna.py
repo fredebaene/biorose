@@ -21,7 +21,7 @@ def test_monomer_counting(dna_seq_file, exp_res):
     """
     dna_seq_file_path = _DATA_DIR / dna_seq_file
     with open(dna_seq_file_path, "r") as f:
-        seq = DNA(f.read().strip())
+        dna = DNA(f.read().strip())
     dna.count_monomers()
     assert dna.monomer_counts == exp_res
 
