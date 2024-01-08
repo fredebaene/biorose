@@ -6,11 +6,12 @@ sequences).
 
 
 from abc import ABC
+from typing import Optional
 
 
 class Sequence(ABC):
     """A base class for biological sequences"""
-    def __init__(self, seq: str, id: str = None) -> None:
+    def __init__(self, seq: str, id: Optional[str] = None) -> None:
         self._id = id
         self._seq = seq
         self._monomer_counts = {monomer: 0 for monomer in self._MONOMERS}
