@@ -8,7 +8,7 @@ sequences).
 from typing import Optional
 
 
-class Sequence:
+class _Sequence:
     """A base class for biological sequences"""
     def __init__(self, seq: str, id: Optional[str] = None) -> None:
         self._id = id
